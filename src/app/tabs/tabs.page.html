@@ -1,10 +1,13 @@
-<ion-tabs #tabs>
+<ion-tabs selectedIndex="1" #tabs>
     <ion-tab-bar slot="bottom">
       <ion-tab-button tab="home">
-  
         <ion-icon name="home"></ion-icon>
         <ion-label>Home</ion-label>
-  
+      </ion-tab-button>
+
+      <ion-tab-button tab="book" class="book-tab-button">
+          <ion-icon name="checkmark-circle-outline"></ion-icon>
+          <ion-label>Book</ion-label>
       </ion-tab-button>
   
       <ion-tab-button tab="profile">
@@ -14,4 +17,4 @@
     
       </ion-tab-button>
     </ion-tab-bar>
-  </ion-tabs>
+</ion-tabs>
