@@ -1,27 +1,57 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title>Sign Up</ion-title>
   </ion-toolbar>
+</ion-header> -->
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-    <ion-list>
-      <ion-item>
-        <ion-label position="floating" >Username</ion-label>
-        <ion-input type="text" required [(ngModel)]="username"></ion-input>
-      </ion-item>
+<ion-content fullscreen class="auth-bg-gradient">
+  <ion-grid class="auth-grid">
+    <ion-row align-items-center style="height:100%;">
+      <ion-col>
+        <div text-center>
+          Logo
+        </div>
+        <div padding class="ion-padding-horizontal">
+          <ion-item class="auth-item">
+              <ion-label mode="ios" position="floating" >Username</ion-label>
+              <ion-input type="text" autofocus [(ngModel)]="username"></ion-input>
+          </ion-item>
+          <ion-item class="auth-item">
+            <ion-label mode="ios" position="floating">Password</ion-label>
+            <ion-input type="password" aria-required="ion-input" [(ngModel)]="password"></ion-input>
+          </ion-item>
+          <ion-item class="auth-item">
+            <ion-label mode="ios" position="floating">Confirm Password</ion-label>
+            <ion-input type="password" aria-required="ion-input" [(ngModel)]="cpassword"></ion-input>
+          </ion-item>
+        </div>
+        <ion-button align-self-end fill="solid" expand="block" (click)="Register()">Sign Up</ion-button>
+      </ion-col>
+    
+    </ion-row>
 
-      <ion-item>
-        <ion-label position="floating">Password</ion-label>
-        <ion-input type="password" aria-required="ion-input" [(ngModel)]="password"></ion-input>
-      </ion-item>
+  </ion-grid>
+    <!-- <ion-item>
+      <div class="bg-trans">
+          <ion-label position="floating" >Username</ion-label>
+          <ion-input type="text" required [(ngModel)]="username"></ion-input>    
+      </div>
+    </ion-item>
 
-      <ion-item>
-        <ion-label position="floating">Confirm Password</ion-label>
-        <ion-input type="password" aria-required="ion-input" [(ngModel)]="cpassword"></ion-input>
-      </ion-item>
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" aria-required="ion-input" [(ngModel)]="password"></ion-input>
+    </ion-item>
 
-    </ion-list>
-
-    <ion-button  fill="solid" expand="block" color="dark" (click)="Register()">Sign Up</ion-button>
+    <ion-item>
+      <ion-label position="floating">Confirm Password</ion-label>
+      <ion-input type="password" aria-required="ion-input" [(ngModel)]="cpassword"></ion-input>
+    </ion-item> -->
 </ion-content>

@@ -1,11 +1,39 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title>login</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
-<ion-content padding>
-    <ion-list>
+<ion-content padding class="auth-bg-gradient">
+  <ion-grid class="auth-grid">
+    <ion-row align-items-center style="height:100%;">
+      <ion-col>
+        <div text-center>
+          <h3 style="color:white">Welcome!</h3>
+        </div>
+
+        <div padding class="">
+          <ion-item class="auth-item">
+            <ion-label mode="ios" position="floating" >Username</ion-label>
+            <ion-input type="text" autofocus required [(ngModel)]="username"></ion-input>
+          </ion-item>
+      
+          <ion-item class="auth-item">
+            <ion-label mode="ios" position="floating">Password</ion-label>
+            <ion-input type="password" aria-required="ion-input" [(ngModel)]="password"></ion-input>
+          </ion-item>
+        </div>
+        <ion-button align-self-end fill="solid" class="ion-text-uppercase" expand="block" (click)="Register()">Log In</ion-button>
+        <div class="ion-text-center ion-padding-top auth-text">
+          <span>Do not have an account? <a routerLink="/register" routerLinkActive="active" class="auth-link">Register</a></span>
+          <router-outlet></router-outlet>
+        </div>
+      </ion-col>
+    
+    </ion-row>
+
+  </ion-grid>
+    <!-- <ion-list>
       <ion-item>
         <ion-label position="floating" >Username</ion-label>
         <ion-input type="text" required [(ngModel)]="username"></ion-input>
@@ -18,5 +46,5 @@
 
     </ion-list>
 
-    <ion-button  fill="solid" expand="block" color="dark" (click)="Login()">Login</ion-button>
+    <ion-button  fill="solid" expand="block" color="dark" (click)="Login()">Login</ion-button> -->
 </ion-content>

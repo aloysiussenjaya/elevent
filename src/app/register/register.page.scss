@@ -1,0 +1,45 @@
+.auth-bg-gradient{
+    background: rgb(38,0,255);
+    --background: linear-gradient(15deg, rgba(0,176,255,1) 0%, rgba(149,0,255,1) 100%);
+}
+
+.auth-grid{
+    height:100% !important;
+    vertical-align: middle;
+    margin-top:-48px;
+}
+
+.auth-item{
+    --background: transparent;
+    --border-color: white;
+    --inner-padding-start:0px;
+    --padding-start:0px;
+}
+
+
+ion-item{
+    --color:white;
+    --color-activated: white;
+    --color-focused:white;
+    --color-hover:white;
+    --border-color:white;
+    --highlight-color-valid: white;
+    --highlight-color-invalid: white;
+    --highlight-color-focused: white ;
+}
+
+ion-button{
+    --background: var(--ion-color-purple);
+    // --background-hover: var(--ion-color-purple-tint);
+    --background-hover: var(--ion-color-purple);
+    --background-activated: var(--ion-color-purple-shade);
+}
+
+ion-toolbar {
+    --background: transparent;
+    --ion-color-base: transparent !important;
+}
+
+ion-back-button{
+    --color:white;
+}
