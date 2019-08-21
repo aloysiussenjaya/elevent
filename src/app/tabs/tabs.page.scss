@@ -1,4 +1,8 @@
 .book-tab-button{
-    --background: #2979ff;
+    --background: var(--ion-color-purple);
     color:white;
+}
+
+ion-tab-button{
+    --color-selected: var(--ion-color-purple-shade);
 }

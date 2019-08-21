@@ -5,13 +5,13 @@
         <ion-label>Home</ion-label>
       </ion-tab-button>
 
-      <ion-tab-button tab="book" class="book-tab-button">
+      <!-- Use a new page, do not include tabs. -->
+      <ion-tab-button (click)="goToBooking();" class="book-tab-button">
           <ion-icon name="checkmark-circle-outline"></ion-icon>
           <ion-label>Book</ion-label>
       </ion-tab-button>
   
       <ion-tab-button tab="profile">
-        
           <ion-icon name="contact"></ion-icon>
           <ion-label>Profile</ion-label>
     

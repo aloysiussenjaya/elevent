@@ -7,12 +7,13 @@ import { RouterModule, Routes } from '@angular/router';
  *  every page address should be here
  */
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '', redirectTo: 'tabs', pathMatch: 'full' },
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
   { path: 'tabs', loadChildren: './tabs/tabs.module#TabsPageModule' },
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
-  { path: 'pserverofile', loadChildren: './profile/profile.module#ProfilePageModule' }
+  { path: 'pserverofile', loadChildren: './profile/profile.module#ProfilePageModule' },
+  { path: 'booking', loadChildren: './booking/booking.module#BookingPageModule' }
   
 ];
 
