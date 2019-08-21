@@ -64,3 +64,8 @@ core/loader/
 core/www/
 .stencil/
 angular/build/
+
+#cordova
+platforms/
+plugins/
+www/
