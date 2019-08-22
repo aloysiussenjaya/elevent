@@ -18,20 +18,31 @@ export class LoginPage implements OnInit {
   constructor(
     public afAuth: AngularFireAuth,
     public alert: AlertController,
-    public user: UserService,
+    public userService: UserService,
     public router: Router
     ) { } 
 
   ngOnInit() {
   }
 // login for make sure with email template example : asdasd + @gmail.com
-  async Login(){
+  async login(){
     const {username,password} = this
+    var loginUsername = '';
+
+    //Solve login issue, so user can log in either with username or email.
+    //Will be changed if the email is not single (codename.com);
+    if(username.includes('@')){
+      var emailCharPos = username.indexOf('@');
+      loginUsername = username.substring(0,emailCharPos);
+    }else{
+      loginUsername = username;
+    }
+
     try{
-      const res = await this.afAuth.auth.signInWithEmailAndPassword(username + '@codedamn.com',password)
+      const res = await this.afAuth.auth.signInWithEmailAndPassword(loginUsername + '@codename.com',password)
 
       if(res.user){
-          this.user.setUser({
+          this.userService.setUser({
             username,
             uid: res.user.uid
           })
