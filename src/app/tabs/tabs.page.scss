@@ -1,8 +1,27 @@
+// Booking button, purple background.
 .book-tab-button{
     --background: var(--ion-color-purple);
     color:white;
 }
+.book-tab-button ion-icon, .book-tab-button ion-label{
+    color:white;
+}
 
-ion-tab-button{
+//For bug handling on mobile device. Please do not edit.
+ion-label{
+    color: var(--ion-color-medium-shade);
+}
+
+ion-tab-button:hover ion-icon, ion-tab-button:hover ion-label{
+    color: var(--ion-color-medium-shade) !important;
+}
+
+.tab-selected:hover ion-icon, .tab-selected:hover ion-label, .tab-selected ion-label{
+    color: var(--ion-color-purple-shade) !important;
+}
+
+ion-tab-button {
+    --color: var(--ion-color-medium-shade);
     --color-selected: var(--ion-color-purple-shade);
+    --background-hover: transparent !important;
 }
