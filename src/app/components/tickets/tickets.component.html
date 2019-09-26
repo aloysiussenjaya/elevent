@@ -1,0 +1,37 @@
+<div class="wrapper">
+  <div class="item-head">
+      <ion-label >Ticket Pricing</ion-label>
+      <ion-button fill="clear" (click)="showAddTicketPrompt()">
+        <ion-icon slot="icon-only" name="add"></ion-icon>
+      </ion-button>
+  </div>
+  <div class="item-body">
+    <small class="text-subtitle" [hidden]="hideEmptyString">Click "+" to add a ticket</small>
+
+    <!-- Ticket item -->
+    
+   <ion-list *ngFor="let item of tickets">
+     <ion-item-sliding>
+       <ion-item class="ticket-item" lines="none">
+         <ion-grid>
+            <ion-row>
+              <ion-col>
+                <span class="ticket-title">{{this.item.title}}</span>
+              </ion-col>
+              <ion-col>
+                <span float-right class="ticket-price">{{this.item.price}}</span>
+              </ion-col>
+            </ion-row>
+         </ion-grid>
+
+
+       </ion-item>
+       <ion-item-options side="end">
+         <ion-item-option color="danger" (click)="removeTicket(item)">Remove</ion-item-option>
+       </ion-item-options>
+
+     </ion-item-sliding>
+   </ion-list> 
+
+  </div>
+</div>

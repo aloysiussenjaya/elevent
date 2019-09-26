@@ -1,6 +1,5 @@
 .auth-bg-gradient{
-    background: rgb(38,0,255);
-    --background: linear-gradient(15deg, rgba(0,176,255,1) 0%, rgba(149,0,255,1) 100%);
+    --background: linear-gradient(to bottom, #ff512f, #f09819);
 }
 
 .auth-grid{
@@ -36,8 +35,8 @@ ion-item{
 }
 
 ion-button{
-    --background: var(--ion-color-purple);
+    --background: var(--ion-color-blue);
     // --background-hover: var(--ion-color-purple-tint);
-    --background-hover: var(--ion-color-purple);
-    --background-activated: var(--ion-color-purple-shade);
+    --background-hover: var(--ion-color-blue);
+    --background-activated: var(--ion-color-blue-tint);
 }

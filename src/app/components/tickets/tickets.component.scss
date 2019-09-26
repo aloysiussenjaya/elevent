@@ -1,0 +1,32 @@
+div.item-head{
+    display:flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items:center;
+    padding: 8px 0;
+}
+
+ion-button{
+    margin-right:0px;
+    --padding-start:0px;
+    --padding-end:0px;
+}
+
+div.item-body{
+    padding-bottom: 8px;
+}
+
+.text-subtitle{
+    color: var(--ion-text-secondary);
+}
+
+
+.ticket-item{
+    --padding-top: 0px;
+    --padding-start: 8px;
+    --padding-end: 8px;
+}
+
+ion-list{
+    padding:0px;
+}

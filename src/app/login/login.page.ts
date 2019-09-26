@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {AngularFireAuth} from '@angular/fire/auth'
 import {auth} from 'firebase/app'
 
-import {AlertController} from '@ionic/angular'
+import {AlertController, Platform} from '@ionic/angular'
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
 @Component({
@@ -19,11 +19,29 @@ export class LoginPage implements OnInit {
     public afAuth: AngularFireAuth,
     public alert: AlertController,
     public userService: UserService,
-    public router: Router
+    public router: Router,
+    private platform:Platform
     ) { } 
 
   ngOnInit() {
+
   }
+
+  ionViewDidEnter(){
+    console.log("login didenter");
+    
+  }
+
+  //Dev Login, no user
+  loginNoUser(){
+    // this.userService.setUser({
+    //   "dev",
+    //   uid: "123"
+    // })
+    this.router.navigate(['/tabs'])
+  }
+
+
 // login for make sure with email template example : asdasd + @gmail.com
   async login(){
     const {username,password} = this

@@ -1,0 +1,28 @@
+div.image-list{
+    display:flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+div.image-list img{
+    width: 48px;
+    margin-right: 16px;
+}
+
+small.img-info{
+    margin-bottom: 8px;
+    margin-top: 4px;
+}
+
+.btn-upload{
+    border: 1px solid #888;
+    border-radius: 5px;
+    padding: 6px;
+    margin: 12px 0;
+}
+
+.btn-publish{
+    text-transform: uppercase;
+    --background: var(--ion-color-orange);
+    --background-hover: var(--ion-color-orange);
+}

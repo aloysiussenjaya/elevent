@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'tabs', loadChildren: './tabs/tabs.module#TabsPageModule' },
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
   { path: 'pserverofile', loadChildren: './profile/profile.module#ProfilePageModule' },
-  { path: 'booking', loadChildren: './booking/booking.module#BookingPageModule' }
+  { path: 'publish-form', loadChildren: './publish-form/publish-form.module#PublishFormPageModule' }
   
 ];
 

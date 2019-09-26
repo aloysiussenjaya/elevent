@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
+import { NavController } from '@ionic/angular';
+import { LoginPage } from '../login/login.page';
 
 @Component({
   selector: 'app-profile',
@@ -10,15 +12,15 @@ export class ProfilePage implements OnInit {
 
   private username = 'null';
 
-  constructor(private userService:UserService) { }
+  constructor(private userService:UserService, private navCtrl:NavController) { }
 
   ngOnInit() {
-    this.username=this.userService.getUsername();
+    // this.username=this.userService.getUsername();
 
   }
 
   logout(){
-    //TODO: CREATE LOGOUT HERE.
+    this.navCtrl.navigateRoot("/login");  
   }
 
 }

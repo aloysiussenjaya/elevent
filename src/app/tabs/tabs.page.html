@@ -1,17 +1,17 @@
 <ion-tabs selectedIndex="1" #tabs>
     <ion-tab-bar slot="bottom">
-      <ion-tab-button tab="home">
+      <ion-tab-button [ngClass]="(selectedTab == 'home') ? 'tab-selected' : ''" (click)="changeTab('home')">
         <ion-icon name="home"></ion-icon>
         <ion-label>Home</ion-label>
       </ion-tab-button>
 
       <!-- Use a new page, do not include tabs. -->
-      <ion-tab-button (click)="goToBooking();" class="book-tab-button">
+      <ion-tab-button (click)="goToPublishForm();" class="book-tab-button">
           <ion-icon name="checkmark-circle-outline"></ion-icon>
-          <ion-label>Book</ion-label>
+          <ion-label>Publish</ion-label>
       </ion-tab-button>
   
-      <ion-tab-button tab="profile">
+      <ion-tab-button [ngClass]="(selectedTab == 'profile') ? 'tab-selected' : ''" (click)="changeTab('profile')">
           <ion-icon name="contact"></ion-icon>
           <ion-label>Profile</ion-label>
     

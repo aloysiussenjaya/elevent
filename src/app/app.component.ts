@@ -28,12 +28,13 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
-      this.backButtonEvent();
+      this.statusBar.styleLightContent();
+
     });
   }
 
   backButtonEvent() {
-    this.platform.backButton.subscribeWithPriority(0, () => {
+    this.platform.backButton.subscribeWithPriority(999, () => {
       this.routerOutlets.forEach(async(outlet: IonRouterOutlet) => {
         if (this.router.url != '/tabs/home') {
           await this.router.navigate(['/tabs/home']);
@@ -44,6 +45,8 @@ export class AppComponent {
           } else {
             navigator['app'].exitApp();
           }
+        } else if (this.router.url === '/login'){
+          this.router.navigateByUrl('/login', { skipLocationChange: true });
         }
       });
     });

@@ -11,17 +11,26 @@ export class TabsPage implements OnInit {
 
   @ViewChild('tabs',{static: true}) tabs:IonTabs
   @ViewChildren(IonRouterOutlet) routerOutlets: QueryList<IonRouterOutlet>;
+  selectedTab="home";
 
   constructor(private router:Router, private platform:Platform) { 
-    this.subscribeBackButton();
+    // this.subscribeBackButton();
   }
 
   ngOnInit() {
     this.tabs.select('home')
   }
 
-  goToBooking(){
-    this.router.navigateByUrl("/booking");
+  changeTab(target){
+    if(this.tabs.getSelected() != target){
+      this.tabs.select(target);
+      this.selectedTab = target;
+    }
+
+  }
+
+  goToPublishForm(){
+    this.router.navigateByUrl("/publish-form");
   }
 
   subscribeBackButton(){

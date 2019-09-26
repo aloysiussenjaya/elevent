@@ -1,13 +1,18 @@
 <ion-header>
-    <ion-toolbar>
-      <ion-title>Profile</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  
-  <ion-content>
-    <p>Hello, {{username}}</p>
-    <ion-button (click)="logout()">
-      Logout
-    </ion-button>
-  </ion-content>
+  <ion-toolbar>
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item lines="full">
+    <app-profile-item style="width:100%;"></app-profile-item>
+  </ion-item>
+  <ion-item button="true" lines="full">
+    <ion-label>Help</ion-label>
+  </ion-item>
+  <ion-item button="true" lines="full" (click)="logout()">
+    <ion-label class="item-logout">Log Out</ion-label>
+  </ion-item>
+</ion-content>
   

@@ -5,14 +5,14 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ProfilePage } from './profile.page';
+import { PublishFormPage } from './publish-form.page';
 
-import { ProfileItemComponent } from '../components/profile-item/profile-item.component';
+import { TicketsComponent } from '../components/tickets/tickets.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: ProfilePage
+    component: PublishFormPage
   }
 ];
 
@@ -23,6 +23,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [ProfilePage, ProfileItemComponent]
+  declarations: [PublishFormPage, TicketsComponent]
 })
-export class ProfilePageModule {}
+export class PublishFormPageModule {}

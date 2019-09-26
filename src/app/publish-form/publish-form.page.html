@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Publish your event</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="stacked">Event Name</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Event Type</ion-label>
+    <ion-select placeholder="Select one" okText="Okay" cancelText="Dismiss">
+      <ion-select-option value="seminars">Seminars/Conferences</ion-select-option>
+      <ion-select-option value="music">Music/Concert</ion-select-option>
+      <ion-select-option value="festival">Festvial</ion-select-option>
+      <ion-select-option value="product-launching">Product Launching</ion-select-option>
+      <ion-select-option value="sport">Sport</ion-select-option>
+      <ion-select-option value="ceremonies">Ceremonies</ion-select-option>
+      <ion-select-option value="birthday">Birthday</ion-select-option>
+      <ion-select-option value="wedding">Wedding</ion-select-option>
+      <ion-select-option value="other">Other</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Visibility</ion-label>
+    <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" value="public">
+      <ion-select-option value="public">Public</ion-select-option>
+      <ion-select-option value="unlisted">Unlisted</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked" style="margin-bottom: 6px;">Event Location</ion-label>
+    <ion-input placeholder="Address"></ion-input>
+    <ion-input placeholder="City"></ion-input>
+    <ion-input placeholder="State/Province"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Start Date</ion-label>
+    <ion-datetime displayFormat="DDD, DD MMM YYYY H:mm" min="2019-01-01" max="2038-01-01" placeholder="Select Time"></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>End Date</ion-label>
+    <ion-datetime displayFormat="DDD, DD MMM YYYY H:mm" min="2019-01-01" max="2038-01-01" placeholder="Select Time"></ion-datetime>
+  </ion-item>
+
+  <ion-item lines="full">
+    <ion-label position="stacked">Event Cover Images</ion-label>
+    <!-- <ion-input id="img-upload" type="file" accept="image/*"></ion-input> -->
+    <label class="btn-upload" for="myFileInput"><ion-icon name="cloud-upload"></ion-icon> Select Images...</label>
+    <input type="file" id="myFileInput" style="display:none;">
+    <div class="image-list">
+      <img class="img-placeholder" src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+    </div>
+    <small class="img-info">Click an image to remove.</small>
+  </ion-item>
+
+  <ion-item lines="full">
+    <app-tickets style="width:100%;">
+    </app-tickets>
+  </ion-item>
+
+  <ion-item lines="full">
+    <ion-label position="stacked">Event Descripption</ion-label>
+    <ion-textarea placeholder="Enter event description here..." rows="5"></ion-textarea>
+  </ion-item>
+
+  <ion-button expand="full" (click)="onClick()" class="btn-publish">
+    Publish Event
+  </ion-button>
+
+</ion-content>
+
