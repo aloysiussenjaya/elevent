@@ -1,3 +1,38 @@
 ion-header ion-button{
     --background-hover:transparent !important;
 }
+
+.item-header{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 16px;
+    font-size: 0.8rem;
+    line-height: 0px;
+
+    ion-button{
+        text-transform: none;
+        font-size: 0.7rem;
+        height: 24px;
+    }
+}
+
+.horizontal-scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+    white-space: nowrap;
+    margin-bottom: 32px;
+    app-event-card {
+        display: inline-block;
+        height: 120px;
+    }
+}
+
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+

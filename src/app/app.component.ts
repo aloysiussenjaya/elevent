@@ -37,14 +37,9 @@ export class AppComponent {
     this.platform.backButton.subscribeWithPriority(999, () => {
       this.routerOutlets.forEach(async(outlet: IonRouterOutlet) => {
         if (this.router.url != '/tabs/home') {
-          await this.router.navigate(['/tabs/home']);
+          await this.router.navigate(['/tabs/home'] );
         } else if (this.router.url === '/tabs/home') {
-          if (new Date().getTime() - this.lastTimeBackPress >= this.timePeriodToExit) {
-            this.lastTimeBackPress = new Date().getTime();
-            this.presentAlertConfirm();
-          } else {
-            navigator['app'].exitApp();
-          }
+          navigator['app'].exitApp();
         } else if (this.router.url === '/login'){
           this.router.navigateByUrl('/login', { skipLocationChange: true });
         }

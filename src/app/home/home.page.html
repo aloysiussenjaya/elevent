@@ -17,5 +17,26 @@
 </ion-header>
 
 <ion-content>
+    <div class="item-header">
+        <span>Hot Events</span>
+        <ion-button float-right fill="clear" class="">More...</ion-button>
+    </div>
+    <div class="horizontal-scroll" scrollX="true" style="width:100%">
+        <app-event-card *ngFor="let item of events" [data]="item"></app-event-card>
+    </div>
 
+    <div class="item-header">
+        <span>Recommendation</span>
+        <ion-button float-right fill="clear" class="">More...</ion-button>
+    </div>
+    <div class="horizontal-scroll" scrollX="true" style="width:100%">
+        <app-event-card *ngFor="let item of events" [data]="item"></app-event-card>
+    </div>
+
+    <hr>
+    
+    <div class="item-header">
+        <span>Menu</span>
+    </div>
+    <app-home-menu-item></app-home-menu-item>
 </ion-content>

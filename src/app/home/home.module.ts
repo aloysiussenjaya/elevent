@@ -9,6 +9,9 @@ import { Routes} from '@angular/router';
 import { HomePage } from './home.page';
 import { from } from 'rxjs';
 
+import { EventCardComponent } from '../components/event-card/event-card.component'
+import { HomeMenuItemComponent } from '../components/home-menu-item/home-menu-item.component'
+
 const routes: Routes = [
   {
     path: '',
@@ -23,6 +26,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [HomePage]
+  declarations: [HomePage, EventCardComponent, HomeMenuItemComponent]
 })
 export class HomePageModule {}

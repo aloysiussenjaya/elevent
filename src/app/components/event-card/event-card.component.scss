@@ -1,0 +1,21 @@
+ion-card{
+    display: inline-block;
+    margin: 0px 8px;
+}
+img{
+    max-height: 160px;
+    object-fit: cover;
+}
+
+ion-card-header{
+    padding: 6px 8px;
+
+    ion-card-subtitle{
+        font-size: 0.7rem;
+    }
+    ion-card-title{
+        font-size: 1rem;
+        margin-top: 4px;
+    }
+
+}
