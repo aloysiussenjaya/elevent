@@ -1,6 +1,7 @@
 ion-card{
-    display: inline-block;
+    display: block;
     margin: 0px 8px;
+    overflow: auto;
 }
 img{
     max-height: 160px;

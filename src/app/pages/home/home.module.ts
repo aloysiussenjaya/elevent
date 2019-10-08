@@ -8,9 +8,8 @@ import { Routes} from '@angular/router';
 
 import { HomePage } from './home.page';
 import { from } from 'rxjs';
-
-import { EventCardComponent } from '../components/event-card/event-card.component'
-import { HomeMenuItemComponent } from '../components/home-menu-item/home-menu-item.component'
+import { GlobalModule } from '../../module/global/global.module';
+import { HomeMenuItemComponent } from '../../components/home-menu-item/home-menu-item.component'
 
 const routes: Routes = [
   {
@@ -24,8 +23,9 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    GlobalModule
   ],
-  declarations: [HomePage, EventCardComponent, HomeMenuItemComponent]
+  declarations: [HomePage, HomeMenuItemComponent]
 })
 export class HomePageModule {}

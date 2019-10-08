@@ -3,7 +3,7 @@ import {AngularFireAuth} from '@angular/fire/auth'
 import {auth} from 'firebase/app'
 
 import {AlertController, Platform} from '@ionic/angular'
-import { UserService } from '../user.service';
+import { UserService } from '../../user.service';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
@@ -38,7 +38,7 @@ export class LoginPage implements OnInit {
     //   "dev",
     //   uid: "123"
     // })
-    this.router.navigate(['/tabs'])
+    this.router.navigateByUrl('/tabs',{skipLocationChange:true});
   }
 
 

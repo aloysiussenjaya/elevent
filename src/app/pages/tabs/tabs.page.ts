@@ -14,7 +14,7 @@ export class TabsPage implements OnInit {
   selectedTab="home";
 
   constructor(private router:Router, private platform:Platform) { 
-    // this.subscribeBackButton();
+
   }
 
   ngOnInit() {
@@ -33,14 +33,4 @@ export class TabsPage implements OnInit {
     this.router.navigateByUrl("/publish-form");
   }
 
-  subscribeBackButton(){
-    // subscription to native back button
-    this.platform.backButton.subscribe(() => {
-      this.routerOutlets.forEach((outlet: IonRouterOutlet) => {
-          if (outlet && outlet.canGoBack()) {
-              outlet.pop();
-          }
-      });
-    });
-  }
 }

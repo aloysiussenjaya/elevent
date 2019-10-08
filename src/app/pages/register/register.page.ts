@@ -5,7 +5,7 @@ import {auth} from 'firebase/app'
 import { AngularFirestore } from '@angular/fire/firestore'
 import {Router} from '@angular/router'
 import { AlertController } from '@ionic/angular'
-import { UserService } from '../user.service';
+import { UserService } from '../../user.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.page.html',

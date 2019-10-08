@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -25,9 +26,13 @@ export class HomePage implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
+  }
+
+  goEventList(){
+    this.router.navigate(['/event-list'])
   }
 
 }

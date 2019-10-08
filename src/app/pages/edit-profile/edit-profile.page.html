@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/profile"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Edit Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <p class="subtitle">Input the changes you want, you doesn't need to input all of these. Input current password and press the button to continue.</p>
+
+  <ion-item>
+    <ion-label position="stacked">New username</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">New email</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Your Current Password (Required)</ion-label>
+    <ion-input type="password" required></ion-input>
+  </ion-item>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+
+    <ion-button type="submit" expand="full" (click)="onClick()" class="btn-publish">
+      DONE
+    </ion-button>
+
+  </ion-toolbar>
+</ion-footer>

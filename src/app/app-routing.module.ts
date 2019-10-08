@@ -7,14 +7,18 @@ import { RouterModule, Routes } from '@angular/router';
  *  every page address should be here
  */
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
-  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
-  { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
-  { path: 'tabs', loadChildren: './tabs/tabs.module#TabsPageModule' },
-  { path: 'home', loadChildren: './home/home.module#HomePageModule' },
-  { path: 'pserverofile', loadChildren: './profile/profile.module#ProfilePageModule' },
-  { path: 'publish-form', loadChildren: './publish-form/publish-form.module#PublishFormPageModule' }
-  
+  { path: '', redirectTo: 'intro-slide', pathMatch: 'full' },
+  { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },
+  { path: 'register', loadChildren: './pages/register/register.module#RegisterPageModule' },
+  { path: 'tabs', loadChildren: './pages/tabs/tabs.module#TabsPageModule' },
+  { path: 'home', loadChildren: './pages/home/home.module#HomePageModule' },
+  { path: 'pserverofile', loadChildren: './pages/profile/profile.module#ProfilePageModule' },
+  { path: 'publish-form', loadChildren: './pages/publish-form/publish-form.module#PublishFormPageModule' },
+  { path: 'intro-slide', loadChildren: './pages/intro-slide/intro-slide.module#IntroSlidePageModule' },
+  { path: 'edit-profile', loadChildren: './pages/edit-profile/edit-profile.module#EditProfilePageModule' },
+  { path: 'event-list', loadChildren: './pages/event-list/event-list.module#EventListPageModule' },
+  { path: 'event-detail', loadChildren: './pages/event-detail/event-detail.module#EventDetailPageModule' }
+
 ];
 
 // localhost/tabs

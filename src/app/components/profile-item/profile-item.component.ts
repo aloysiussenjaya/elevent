@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile-item',
@@ -7,8 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileItemComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {}
+
+  editProfile(){
+    this.router.navigate(['/edit-profile']);  
+  }
 
 }
