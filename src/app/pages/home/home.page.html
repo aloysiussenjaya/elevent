@@ -1,7 +1,7 @@
 <ion-header no-border>
     <ion-toolbar>
         <ion-buttons slot="start">
-            <ion-button>
+            <ion-button color="dark">
                 <!-- Chat Button? Or what? -->
                 <ion-icon slot="icon-only" name="chatboxes"></ion-icon>
             </ion-button>
@@ -9,7 +9,7 @@
         <!-- Replace title with elevent logo. -->
         <ion-title class="ion-text-center">Elevent</ion-title> 
         <ion-buttons slot="end">
-            <ion-button fill="clear" (click)="goEventList()">
+            <ion-button color="dark" fill="clear" (click)="goEventList()">
                 <ion-icon slot="icon-only" name="search"></ion-icon>
             </ion-button>
         </ion-buttons>
@@ -17,9 +17,10 @@
 </ion-header>
 
 <ion-content>
+    <div class="circle-bg"></div>
     <div class="item-header">
         <span>Hot Events</span>
-        <ion-button float-right fill="clear" class="">More...</ion-button>
+        <ion-button float-right fill="clear" class=""><ion-icon slot="icon-only" name="arrow-forward"></ion-icon></ion-button>
     </div>
     <div class="horizontal-scroll" scrollX="true" style="width:100%">
         <app-event-card *ngFor="let item of events" [data]="item"></app-event-card>
@@ -27,7 +28,7 @@
 
     <div class="item-header">
         <span>Recommendation</span>
-        <ion-button float-right fill="clear" class="">More...</ion-button>
+        <ion-button float-right fill="clear" class=""><ion-icon slot="icon-only" name="arrow-forward"></ion-icon></ion-button>
     </div>
     <div class="horizontal-scroll" scrollX="true" style="width:100%">
         <app-event-card *ngFor="let item of events" [data]="item"></app-event-card>

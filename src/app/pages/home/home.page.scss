@@ -1,5 +1,29 @@
 ion-header ion-button{
     --background-hover:transparent !important;
+    
+}
+
+ion-toolbar{
+    --background: rgb(255,158,111);
+    // --color: white;
+}
+
+ion-title{
+    text-transform: lowercase;
+    font-family: 'Comfortaa';
+    font-weight: bold;
+}
+
+.circle-bg{
+    background: linear-gradient(to bottom, #ff5f6d, #ffc371);
+    border: 1px solid transparent;
+    border-radius:100%;
+    position:absolute;
+    width: 180%;
+    height: 80%;
+    top: -50%;
+    left: -40%;
+    z-index: 0;
 }
 
 .item-header{
@@ -10,6 +34,10 @@ ion-header ion-button{
     padding: 0px 16px;
     font-size: 0.8rem;
     line-height: 0px;
+    z-index: 10;
+    span{
+        z-index: 10;
+    }
 
     ion-button{
         text-transform: none;

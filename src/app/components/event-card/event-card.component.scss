@@ -2,6 +2,8 @@ ion-card{
     display: block;
     margin: 0px 8px;
     overflow: auto;
+    --background: #fff;
+    border-radius: 6px;
 }
 img{
     max-height: 160px;
@@ -16,6 +18,8 @@ ion-card-header{
     }
     ion-card-title{
         font-size: 1rem;
+        font-family: 'Comfortaa';
+        font-weight: bold;
         margin-top: 4px;
     }
 

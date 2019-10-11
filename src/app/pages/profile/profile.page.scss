@@ -1,3 +1,46 @@
 .item-logout{
     color: var(--ion-color-danger);
 }
+
+ion-card{
+    border-radius: 8px;
+}
+
+ion-item{
+    --background-hover: #fff !important; 
+}
+
+.profile-wrap{
+    padding: 16px 16px;
+    height: 100%;   
+    
+    .circle-bg{
+        background: linear-gradient(to bottom, #ff5f6d, #ffc371);
+        border: 1px solid transparent;
+        border-radius:100%;
+        position:absolute;
+        width: 180%;
+        height: 80%;
+        top: -50%;
+        left: -40%;
+        z-index: 1;
+    }
+
+    .main-avatar{
+        margin: auto;
+        position: relative;
+        top: 48px;
+        z-index: 100;
+        width: 96px;
+        height: 96px;
+    }
+
+    .profile-box{
+        z-index: 90;
+
+        app-profile-item{
+            margin-top: 32px;
+        }
+    }
+
+}

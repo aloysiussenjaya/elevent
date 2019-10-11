@@ -1,21 +1,33 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title>Profile</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content>
-  <ion-item lines="full">
-    <app-profile-item style="width:100%;"></app-profile-item>
-  </ion-item>
-  <ion-item button="true" lines="full">
-    <ion-label>Help</ion-label>
-  </ion-item>
-  <ion-item button="true" lines="full">
-      <ion-label>Upgrade Account</ion-label>
-    </ion-item>
-  <ion-item button="true" lines="full" (click)="logout()">
-    <ion-label class="item-logout">Log Out</ion-label>
-  </ion-item>
+  <div class="profile-wrap">
+    <div class="circle-bg"></div>
+    <ion-avatar class="main-avatar">
+      <img src="https://cdn3.iconfinder.com/data/icons/avatars-15/64/_Ninja-2-512.png">
+    </ion-avatar>
+    <ion-card class="profile-box">
+        <ion-item lines="full">
+          <app-profile-item style="width:100%;"></app-profile-item>
+        </ion-item>
+        <ion-item button="true" lines="full">
+          <ion-label>My Events</ion-label>
+        </ion-item>
+        <ion-item button="true" lines="full">
+          <ion-label>Help</ion-label>
+        </ion-item>
+        <ion-item button="true" lines="full">
+          <ion-label>Upgrade Account</ion-label>
+        </ion-item>
+        <ion-item button="true" lines="full" (click)="logout()">
+          <ion-label class="item-logout">Log Out</ion-label>
+        </ion-item>
+    </ion-card>
+  </div>
+  
 </ion-content>
   
