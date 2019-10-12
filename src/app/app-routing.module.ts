@@ -7,7 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
  *  every page address should be here
  */
 const routes: Routes = [
-  { path: '', redirectTo: 'intro-slide', pathMatch: 'full' },
+  { path: '', redirectTo: 'splash-screen', pathMatch: 'full' },
   { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },
   { path: 'register', loadChildren: './pages/register/register.module#RegisterPageModule' },
   { path: 'tabs', loadChildren: './pages/tabs/tabs.module#TabsPageModule' },
@@ -17,8 +17,8 @@ const routes: Routes = [
   { path: 'intro-slide', loadChildren: './pages/intro-slide/intro-slide.module#IntroSlidePageModule' },
   { path: 'edit-profile', loadChildren: './pages/edit-profile/edit-profile.module#EditProfilePageModule' },
   { path: 'event-list', loadChildren: './pages/event-list/event-list.module#EventListPageModule' },
-  { path: 'event-detail', loadChildren: './pages/event-detail/event-detail.module#EventDetailPageModule' }
-
+  { path: 'event-detail', loadChildren: './pages/event-detail/event-detail.module#EventDetailPageModule' },
+  { path: 'splash-screen', loadChildren: './pages/splash-screen/splash-screen.module#SplashScreenPageModule' }
 ];
 
 // localhost/tabs

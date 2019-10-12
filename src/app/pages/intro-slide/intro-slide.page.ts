@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-intro-slide',
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
 export class IntroSlidePage implements OnInit {
 
   constructor(
-    public router: Router
+    public router: Router,
   ) { }
 
   ngOnInit() {}
@@ -18,5 +19,7 @@ export class IntroSlidePage implements OnInit {
 
     this.router.navigate(['/login'])
   }
+
+  
 
 }

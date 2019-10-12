@@ -33,19 +33,19 @@ export class AppComponent {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
       this.statusBar.styleLightContent();
-      this.checkLocalStorage();
+      // this.checkLocalStorage();
     });
   }
 
-  async checkLocalStorage(){
-    if( await this.storage.get('showSlide') == undefined) {
-      console.log("storage : " + this.storage.get('showSlide'));
-      this.storage.set('showSlide', false);
-    } else {
-      console.log('showlide is set, skipping slide intro...');
-      this.navCtrl.navigateRoot('/login');
-    }
-  }
+  // async checkLocalStorage(){
+  //   if( await this.storage.get('showSlide') == undefined) {
+  //     console.log("storage : " + this.storage.get('showSlide'));
+  //     this.storage.set('showSlide', false);
+  //   } else {
+  //     console.log('showlide is set, skipping slide intro...');
+  //     this.navCtrl.navigateRoot('/login');
+  //   }
+  // }
 
   backButtonEvent() {
     this.platform.backButton.subscribeWithPriority(999, () => {
