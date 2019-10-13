@@ -1,0 +1,24 @@
+
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="/tabs/profile" ></ion-back-button>
+    </ion-buttons>
+    <ion-title>Add Events</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list lines="full">
+    <ion-item>
+      <ion-input required type="text" placeholder="Title" [(ngModel)]="myevent.title"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-input required type="text" placeholder="Place" [(ngModel)]="myevent.place"></ion-input>
+      </ion-item>
+    <ion-item>
+        <ion-input required type="number" placeholder="Price" [(ngModel)]="myevent.price"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button align-self-end fill="solid" class="ion-text-uppercase" expand="block" (click)="saveMyEvent()">Save</ion-button>
+</ion-content>

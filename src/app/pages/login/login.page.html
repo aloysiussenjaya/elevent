@@ -23,7 +23,7 @@
             <ion-input type="password" aria-required="ion-input" [(ngModel)]="password"></ion-input>
           </ion-item>
         </div>
-        <ion-button align-self-end fill="solid" class="ion-text-uppercase" expand="block" (click)="loginNoUser()">Log In</ion-button>
+        <ion-button align-self-end fill="solid" class="ion-text-uppercase" expand="block" (click)="login()">Log In</ion-button>
         <div class="ion-text-center ion-padding-top auth-text">
           <span>Do not have an account? <a routerLink="/register" routerLinkActive="active" class="auth-link">Register</a></span>
           <router-outlet></router-outlet>

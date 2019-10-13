@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../user.service';
 import { NavController, AlertController } from '@ionic/angular';
 import { LoginPage } from '../login/login.page';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.page.html',
@@ -12,13 +12,20 @@ export class ProfilePage implements OnInit {
 
   private username = 'null';
 
-  constructor(private userService:UserService, private navCtrl:NavController, private alertCtrl:AlertController) { }
+  constructor(
+    public router: Router,
+    private userService:UserService, 
+    private navCtrl:NavController, 
+    private alertCtrl:AlertController) { }
 
   ngOnInit() {
-    // this.username=this.userService.getUsername();
-
+    this.username=this.userService.getUsername();
   }
 
+  async myEventsPage(){
+
+    this.router.navigate(['/myevent'])
+  }
   async logout(){
     const logoutAlert = await this.alertCtrl.create({
       header:'Logout',

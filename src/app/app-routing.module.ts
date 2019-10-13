@@ -7,7 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
  *  every page address should be here
  */
 const routes: Routes = [
-  { path: '', redirectTo: 'splash-screen', pathMatch: 'full' },
+  { path: '', redirectTo: 'myevent', pathMatch: 'full' },
   { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },
   { path: 'register', loadChildren: './pages/register/register.module#RegisterPageModule' },
   { path: 'tabs', loadChildren: './pages/tabs/tabs.module#TabsPageModule' },
@@ -18,7 +18,11 @@ const routes: Routes = [
   { path: 'edit-profile', loadChildren: './pages/edit-profile/edit-profile.module#EditProfilePageModule' },
   { path: 'event-list', loadChildren: './pages/event-list/event-list.module#EventListPageModule' },
   { path: 'event-detail', loadChildren: './pages/event-detail/event-detail.module#EventDetailPageModule' },
-  { path: 'splash-screen', loadChildren: './pages/splash-screen/splash-screen.module#SplashScreenPageModule' }
+  { path: 'splash-screen', loadChildren: './pages/splash-screen/splash-screen.module#SplashScreenPageModule' },
+  { path: 'my-event-details', loadChildren: './pages/my-event-details/my-event-details.module#MyEventDetailsPageModule' },
+  { path: 'my-event-details/:id', loadChildren: './pages/my-event-details/my-event-details.module#MyEventDetailsPageModule' },
+  { path: 'myevent', loadChildren: './pages/myevent/myevent.module#MyeventPageModule' }
+
 ];
 
 // localhost/tabs

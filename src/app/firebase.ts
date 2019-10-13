@@ -3,9 +3,9 @@ const config = {
     authDomain: "evelent-29e3c.firebaseapp.com",
     databaseURL: "https://evelent-29e3c.firebaseio.com",
     projectId: "evelent-29e3c",
-    storageBucket: "",
+    storageBucket: "evelent-29e3c.appspot.com",
     messagingSenderId: "236138574134",
-    appId: "1:236138574134:web:a45888ecd87aeb0c"
+    appId: "1:236138574134:web:a472158d0321534cf44397"
 }
 
 export default config  
