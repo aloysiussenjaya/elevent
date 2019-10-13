@@ -4,12 +4,12 @@ import {auth} from 'firebase/app'
 
 import { AngularFirestore } from '@angular/fire/firestore'
 import {Router} from '@angular/router'
-import { AlertController } from '@ionic/angular'
-import { UserService } from '../../user.service';
+import { AlertController, NavController } from '@ionic/angular'
+import { UserService } from '../../../user.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.page.html',
-  styleUrls: ['./register.page.scss'],
+  styleUrls: ['./register.page.scss','../auth-style.scss'],
 })
 export class RegisterPage implements OnInit {
 
@@ -23,12 +23,16 @@ export class RegisterPage implements OnInit {
     public afstore: AngularFirestore,
     public user: UserService,
     public alert: AlertController,
-    public router: Router
-    
+    public router: Router,
+    private navCtrl: NavController
     ) { }
 
   ngOnInit(){
 
+  }
+
+  goBack(){
+    this.navCtrl.back();
   }
 
   async showAlert(header: string , message: string){

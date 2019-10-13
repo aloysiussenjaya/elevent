@@ -1,0 +1,60 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>Sign Up</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content fullscreen class="auth-wrap">
+  <div class="background"></div>
+  <div class="topbar">
+    <ion-button class="back-btn" shape="round" fill="clear" (click)="goBack()">
+      <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+    </ion-button>
+  </div>
+  <ion-grid class="auth-grid">
+    <ion-row align-items-center style="height:100%;">
+      <ion-col>
+        <div text-center>
+          <h3>Registration</h3>
+        </div>
+
+        <ion-card class="form-card">
+            <ion-item class="auth-item user-item" lines="none">
+                <ion-label mode="ios" ></ion-label>
+                <ion-input type="text" placeholder="Username" autofocus [(ngModel)]="username"></ion-input>
+            </ion-item>
+            <ion-item class="auth-item user-item" lines="none">
+              <ion-label mode="ios"></ion-label>
+              <ion-input type="password" placeholder="Password" aria-required="ion-input" [(ngModel)]="password"></ion-input>
+            </ion-item>
+            <ion-item class="auth-item" lines="none">
+              <ion-label mode="ios"></ion-label>
+              <ion-input type="password" placeholder="Confirm Password" aria-required="ion-input" [(ngModel)]="cpassword"></ion-input>
+            </ion-item>
+          <ion-button class="auth-btn" shape="round" (click)="register()">
+              <ion-icon slot="icon-only" name="arrow-forward"></ion-icon>
+          </ion-button>
+        </ion-card>
+
+      </ion-col>
+    
+    </ion-row>
+
+  </ion-grid>
+    <!-- <ion-item>
+      <div class="bg-trans">
+          <ion-label position="floating" >Username</ion-label>
+          <ion-input type="text" required [(ngModel)]="username"></ion-input>    
+      </div>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" aria-required="ion-input" [(ngModel)]="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Confirm Password</ion-label>
+      <ion-input type="password" aria-required="ion-input" [(ngModel)]="cpassword"></ion-input>
+    </ion-item> -->
+</ion-content>
