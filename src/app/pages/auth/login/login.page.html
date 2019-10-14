@@ -1,0 +1,40 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content fullscreen class="auth-wrap">
+  <div class="background"></div>
+  <ion-grid class="auth-grid">
+    <ion-row align-items-center style="height:100%;">
+      <ion-col>
+        <div text-center>
+          <h3>Welcome!</h3>
+        </div>
+
+        <ion-card class="form-card">
+          <ion-item class="auth-item user-item" lines="none">
+            <ion-label mode="md" ></ion-label>
+            <ion-input type="text" placeholder="Username" autofocus required [(ngModel)]="username"></ion-input>
+          </ion-item>
+      
+          <ion-item class="auth-item" lines="none">
+            <ion-label mode="md"></ion-label>
+            <ion-input type="password"  placeholder="Password" aria-required="ion-input" [(ngModel)]="password"></ion-input>
+          </ion-item>
+          <ion-button class="auth-btn" shape="round" (click)="login()">
+              <ion-icon slot="icon-only" name="arrow-forward"></ion-icon>
+          </ion-button>
+        </ion-card>
+
+        <div class="ion-text-center auth-text">
+          <span>Do not have an account? <a routerLink="/register" routerLinkActive="active" class="auth-link">Register</a></span>
+          <router-outlet></router-outlet>
+        </div>
+      </ion-col>
+    
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

@@ -1,12 +1,10 @@
-<ion-header no-border>
+<!-- <ion-header no-border>
     <ion-toolbar>
         <ion-buttons slot="start">
             <ion-button color="dark">
-                <!-- Chat Button? Or what? -->
                 <ion-icon slot="icon-only" name="chatboxes"></ion-icon>
             </ion-button>
         </ion-buttons>
-        <!-- Replace title with elevent logo. -->
         <ion-title class="ion-text-center">Elevent</ion-title> 
         <ion-buttons slot="end">
             <ion-button color="dark" fill="clear" (click)="goEventList()">
@@ -14,12 +12,26 @@
             </ion-button>
         </ion-buttons>
     </ion-toolbar>
-</ion-header>
+</ion-header> -->
+
 
 <ion-content>
     <div class="circle-bg"></div>
+    <div class="home-header">
+        <ion-buttons slot="start">
+            <ion-button color="light">
+                <ion-icon slot="icon-only" name="chatboxes"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title class="ion-text-center">Elevent</ion-title> 
+        <ion-buttons slot="end">
+            <ion-button color="dark" fill="clear" (click)="goEventList()">
+                <ion-icon slot="icon-only" name="search"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </div>
     <div class="item-header">
-        <span>Hot Events</span>
+        <span class="text-light">Hot Events</span>
         <ion-button float-right fill="clear" class=""><ion-icon slot="icon-only" name="arrow-forward"></ion-icon></ion-button>
     </div>
     <div class="horizontal-scroll" scrollX="true" style="width:100%">

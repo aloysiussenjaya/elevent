@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header no-border>
   <ion-toolbar>
     <ion-title>My Events</ion-title>
     <ion-buttons slot="start">
@@ -21,16 +21,16 @@
     <ion-item-sliding *ngFor="let item of myevents">
       <ion-item lines="inset" button [routerLink]="['/my-event-details',item.id]">
         <ion-label>
-          {{item.title}}
-          <p>{{item.place | date: 'short'}}</p>
+          {{item.e_name}}
+          <p>{{item.price | date: 'short'}}</p>
         </ion-label>
-        <ion-note slot="end" color="primary">{{item.price}}</ion-note>
+        <ion-note slot="end" color="primary">{{item.type}}</ion-note>
       </ion-item>
 
       <ion-item-options side="end">
-        <ion-item-option (click)="remove(item)" color="secondary">
-          Check
-          <ion-icon name="checkmark" slot="end"></ion-icon>
+        <ion-item-option (click)="remove(item)" color="danger">
+          DELETE
+          <ion-icon name="xmmark" slot="end"></ion-icon>
         </ion-item-option>
       </ion-item-options>
     </ion-item-sliding>

@@ -9,6 +9,81 @@
 </ion-header>
 
 <ion-content padding>
+    <ion-item padding-bottom>
+        <ion-label position="stacked" color="primary">Event Name</ion-label>
+        <ion-input placeholder="Event Name" [(ngModel)]="myevent.e_name"></ion-input>
+    </ion-item>
+
+    <ion-item padding-bottom>
+    <ion-label position="stacked" color="primary">Event Type</ion-label>
+    <ion-select placeholder="Select one" okText="Okay" cancelText="Dismiss" [(ngModel)]="myevent.e_type">
+      <ion-select-option value="seminars">Seminars/Conferences</ion-select-option>
+      <ion-select-option value="music">Music/Concert</ion-select-option>
+      <ion-select-option value="festival">Festival</ion-select-option>
+      <ion-select-option value="esport">Esports</ion-select-option>
+      <ion-select-option value="product-launching">Product Launching</ion-select-option>
+      <ion-select-option value="sport">Sport</ion-select-option>
+      <ion-select-option value="ceremonies">Ceremonies</ion-select-option>
+      <ion-select-option value="birthday">Birthday</ion-select-option>
+      <ion-select-option value="wedding">Wedding</ion-select-option>
+      <ion-select-option value="other">Other</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item padding-bottom>
+    <ion-label position="stacked" color="primary">Visibility</ion-label>
+    <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" value="public" [(ngModel)]="myevent.e_visi">
+      <ion-select-option value="public">Public</ion-select-option>
+      <ion-select-option value="unlisted">Unlisted</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item padding-bottom lines="none">
+    <ion-label color="primary" position="stacked" style="margin-bottom: 6px;">Event Location</ion-label>
+    <ion-item>
+      <ion-input placeholder="Address" [(ngModel)]="myevent.e_add"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="City" [(ngModel)]="myevent.e_city"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="State/Province" [(ngModel)]="myevent.e_state"></ion-input>
+    </ion-item>
+  </ion-item>
+
+  <ion-item padding-bottom>
+    <ion-label position="stacked" color="primary">Start Date</ion-label>
+    <ion-datetime displayFormat="DDD, DD MMM YYYY H:mm" min="2019-01-01" max="2038-01-01" placeholder="Select Time" [(ngModel)]="myevent.e_s_date"></ion-datetime>
+  </ion-item>
+
+  <ion-item padding-bottom>
+    <ion-label color="primary" position="stacked" >End Date</ion-label>
+    <ion-datetime displayFormat="DDD, DD MMM YYYY H:mm" min="2019-01-01" max="2038-01-01" placeholder="Select Time" [(ngModel)]="myevent.e_e_date"></ion-datetime>
+  </ion-item>
+
+  <ion-item lines="full" padding-bottom>
+    <ion-label color="primary" position="stacked">Event Cover Images</ion-label>
+    <ion-input id="img-upload" type="file" accept="image/*"></ion-input>
+    <!-- <label class="btn-upload" for="myFileInput"><ion-icon name="cloud-upload"></ion-icon> Select Images...</label>
+    <input type="file" id="myFileInput" style="display:none;"> -->
+    <div class="image-list">
+      <img class="img-placeholder" src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+    </div>
+    <!-- <small class="img-info">Click an image to remove.</small> -->
+  </ion-item>
+
+  <ion-item lines="full">
+    <app-tickets style="width:100%">
+    </app-tickets>
+  </ion-item>
+  
+  <ion-item lines="full" padding-bottom>
+    <ion-label position="stacked" color="primary">Event Description</ion-label>
+    <ion-textarea placeholder="Enter event description here..." rows="5" [(ngModel)]="myevent.e_desc"></ion-textarea>
+  </ion-item>
+  <ion-button align-self-end fill="solid" class="ion-text-uppercase" expand="block" (click)="saveMyEvent()">Save</ion-button>
+</ion-content>
+<!-- <ion-content padding>
   <ion-list lines="full">
     <ion-item>
       <ion-input required type="text" placeholder="Title" [(ngModel)]="myevent.title"></ion-input>
@@ -17,8 +92,8 @@
         <ion-input required type="text" placeholder="Place" [(ngModel)]="myevent.place"></ion-input>
       </ion-item>
     <ion-item>
+      <ion-label>Price :</ion-label>
         <ion-input required type="number" placeholder="Price" [(ngModel)]="myevent.price"></ion-input>
     </ion-item>
   </ion-list>
-  <ion-button align-self-end fill="solid" class="ion-text-uppercase" expand="block" (click)="saveMyEvent()">Save</ion-button>
-</ion-content>
+</ion-content> -->

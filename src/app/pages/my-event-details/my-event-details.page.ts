@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MyeventService, MyEvent } from 'src/app/services/myevent.service';
 import { ActivatedRoute } from '@angular/router';
 import { LoadingController, NavController } from '@ionic/angular';
-  import { from } from 'rxjs';
+import { from } from 'rxjs';
 @Component({
   selector: 'app-my-event-details',
   templateUrl: './my-event-details.page.html',
@@ -10,10 +10,26 @@ import { LoadingController, NavController } from '@ionic/angular';
 })
 export class MyEventDetailsPage implements OnInit {
 
+  customPopoverOptions: any = {
+    header: 'Event Visibility',
+    message: 'Unlisted event will not be shown in user feeds.'
+  };
+
   myevent: MyEvent = {
-    title: 'Music Fest',
-    place: 'Sabuga ITB',
-    price: 100.000,
+    e_name : '',
+    e_type : '',
+    e_visi : '',
+    e_add : '',
+    e_city : '',
+    e_state : '',
+    e_s_date : '',
+    e_e_date : '',
+    e_t_name : '',
+    e_t_price : '',
+    e_desc : '',
+    // title: '',
+    // place: '',
+    // price: 0,
     // date: new Date().getTime()
   }
 

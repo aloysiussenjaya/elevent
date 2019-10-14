@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { MyEventDetailsPage } from './my-event-details.page';
 
+import { TicketsComponent } from '../../components/tickets/tickets.component';
 const routes: Routes = [
   {
     path: '',
@@ -21,6 +22,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [MyEventDetailsPage]
+  declarations: [MyEventDetailsPage, TicketsComponent]
 })
 export class MyEventDetailsPageModule {}

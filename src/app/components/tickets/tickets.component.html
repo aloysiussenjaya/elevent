@@ -1,6 +1,6 @@
 <div class="wrapper">
   <div class="item-head">
-      <ion-label >Ticket Pricing</ion-label>
+      <ion-label position="stacked" color="primary">Ticket Pricing</ion-label>
       <ion-button fill="clear" (click)="showAddTicketPrompt()">
         <ion-icon slot="icon-only" name="add"></ion-icon>
       </ion-button>
@@ -15,10 +15,10 @@
        <ion-item class="ticket-item" lines="none">
          <ion-grid>
             <ion-row>
-              <ion-col>
-                <span class="ticket-title">{{this.item.title}}</span>
+              <ion-col [(ngModel)]="myevent.e_t_name">
+                <span class="ticket-title">{{this.item.title}} </span>
               </ion-col>
-              <ion-col>
+              <ion-col [(ngModel)]="myevent.e_t_price">
                 <span float-right class="ticket-price">{{this.item.price}}</span>
               </ion-col>
             </ion-row>

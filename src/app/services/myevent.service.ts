@@ -4,9 +4,21 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 export interface MyEvent{
-  title : string;
-  place : string;
-  price : number;
+
+  e_name : string;
+  e_type : string;
+  e_visi : string;
+  e_add : string;
+  e_city : string;
+  e_state : string;
+  e_s_date : string;
+  e_e_date : string;
+  e_t_name : string;
+  e_t_price : string;
+  e_desc : string;
+  // title : string;
+  // place : string;
+  // price : number;
   // date : number; att for date and time using datepicker as input
 }
 

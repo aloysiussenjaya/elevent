@@ -2,12 +2,32 @@ ion-card{
     display: block;
     margin: 0px 8px;
     overflow: auto;
-    --background: #fff;
     border-radius: 6px;
+    position: relative;
 }
 img{
-    max-height: 160px;
+    max-height: 180px;
     object-fit: cover;
+    filter: brightness(60%);
+}
+
+.foreground {
+    position: absolute;
+    bottom: 0px;
+    color: white;
+    width: 100%;
+    padding: 8px 16px;
+    h2 {
+        font-size: 1.2rem;
+        font-family: 'Comfortaa';
+        font-weight: bold;
+        margin: 8px 0px;
+    }
+    p {
+        font-size: 0.8rem;
+        margin: 4px 0px;
+    }
+
 }
 
 ion-card-header{
