@@ -5,29 +5,32 @@
 </ion-header> -->
 
 <ion-content>
+  <div class="shape-bg"></div>
   <div class="profile-wrap">
-    <div class="circle-bg"></div>
     <ion-avatar class="main-avatar">
       <img src="https://cdn3.iconfinder.com/data/icons/avatars-15/64/_Ninja-2-512.png">
     </ion-avatar>
-    <ion-card class="profile-box">
-        <ion-item lines="full">
-          <app-profile-item style="width:100%;"></app-profile-item>
-        </ion-item>
-        <ion-item button="true" lines="full" (click)="myEventsPage()">
-          <ion-label>My Events</ion-label>
-        </ion-item>
-        <ion-item button="true" lines="full">
-          <ion-label>Help</ion-label>
-        </ion-item>
-        <ion-item button="true" lines="full">
-          <ion-label>Upgrade Account</ion-label>
-        </ion-item>
-        <ion-item button="true" lines="full" (click)="logout()">
-          <ion-label class="item-logout">Log Out</ion-label>
-        </ion-item>
-    </ion-card>
+    <div class="profile-header">
+      <app-profile-item></app-profile-item>
+    </div>
+    <ion-row>
+      <ion-col>
+        <ion-button float-right fill="clear" class="btn-msg" size="small" shape="round" (click)="onClick()">
+          UPGRADE
+        </ion-button>
+      </ion-col>
+      <ion-col>
+          <ion-button float-left fill="clear" class="btn-logout" size="small" shape="round" (click)="onClick()">
+            LOG OUT
+          </ion-button>
+      </ion-col>
+    </ion-row>
+    <div class="menu-wrapper">
+      <app-profile-menu></app-profile-menu>
+    </div>
   </div>
+
+
   
 </ion-content>
   

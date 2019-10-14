@@ -10,34 +10,66 @@ ion-item{
     --background-hover: #fff !important; 
 }
 
+.shape-bg{
+    background: var(--ion-color-dark-blue);
+    border: 1px solid transparent;
+    position: absolute;
+    width: 140%;
+    height: 80%;
+    top: -60%;
+    left: -10%;
+    transform: skew(0deg, -10deg);
+    z-index: 0;
+}
+
+.top-btn {
+    width: 100%;
+    height: 64px;
+    padding: 8px 4px;
+    position: absolute;
+    top: 0px;
+    z-index: 10;
+}
+
 .profile-wrap{
     padding: 16px 16px;
-    height: 100%;   
-    
-    .circle-bg{
-        background: linear-gradient(to bottom, #ff5f6d, #ffc371);
-        border: 1px solid transparent;
-        border-radius:100%;
-        position:absolute;
-        width: 180%;
-        height: 80%;
-        top: -50%;
-        left: -40%;
-        z-index: 1;
-    }
+    height: 100%;
+
 
     .main-avatar{
+        z-index: 10;
         margin: auto;
         position: relative;
-        top: 48px;
-        z-index: 100;
+        // top: 10%;
+        margin-top: 15%;
         width: 96px;
         height: 96px;
+        z-index: 10;
+    }
+
+    .btn-msg{
+        margin: auto;
+        display: inline-block;
+        border: 1px solid var(--ion-color-blue);
+        border-radius: 64px;
+        --color: var(--ion-color-blue);
+        width: 100px;
+    }
+
+    .btn-logout {
+        margin: auto;
+        display: inline-block;
+        border: 1px solid var(--ion-color-danger);
+        border-radius: 64px;
+        --color: var(--ion-color-danger);
+        width: 100px;
+    }
+
+    .menu-wrapper{
+        padding: 8px 0px;
     }
 
     .profile-box{
-        z-index: 90;
-
         app-profile-item{
             margin-top: 32px;
         }
