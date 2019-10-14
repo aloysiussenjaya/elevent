@@ -30,6 +30,7 @@
     "angularfire2": "^5.2.1",
     "com.telerik.plugins.nativepagetransitions": "^0.6.5",
     "cordova-android": "8.0.0",
+    "cordova-ios": "5.0.1",
     "cordova-sqlite-storage": "^3.4.0",
     "core-js": "^2.5.4",
     "firebase": "^6.6.2",
@@ -83,7 +84,8 @@
       "cordova-sqlite-storage": {}
     },
     "platforms": [
-      "android"
+      "android",
+      "ios"
     ]
   }
 }
