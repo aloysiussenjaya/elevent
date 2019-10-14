@@ -1,22 +1,26 @@
 <ion-grid>
-    <ion-row class="ion-justify-content-between">
-        <ion-col>
-            <ion-card class="square-menu" button (click)="cardClick()">
-                <img src="https://img.icons8.com/cute-clipart/64/000000/tear-off-calendar.png" alt=""> 
-                <ion-label>Events</ion-label>
+    <ion-row class="">
+        <div class="horizontal-scroll" scrollX="true" style="width:100%">
+            <ion-card class="square-menu" button (click)="openMyEvent()">
+                <img src="../../../assets/bg_event.jpg" alt="eventbg"> 
+                <div class="foreground">
+                    <h2>Events</h2>
+                </div>
             </ion-card>
-        </ion-col>
-        <ion-col>
-          <ion-card class="square-menu" button (click)="cardClick()">
-              <img src="https://img.icons8.com/cute-clipart/64/000000/user-male.png" alt=""> 
-              <ion-label>Account</ion-label>
-          </ion-card>
-        </ion-col>
-        <ion-col>
-          <ion-card class="square-menu" button (click)="cardClick()">
-              <img src="https://img.icons8.com/cute-clipart/50/000000/settings.png" alt=""> 
-              <ion-label>Settings</ion-label>
-          </ion-card>
-        </ion-col>
+
+            <ion-card class="square-menu" button (click)="cardClick()">
+                <img src="../../../assets/bg_event.jpg" alt="eventbg"> 
+                <div class="foreground">
+                    <h2>Discover</h2>
+                </div>
+            </ion-card>
+            <ion-card class="square-menu" button (click)="cardClick()">
+                <img src="../../../assets/bg_other.jpg" alt="eventbg"> 
+                <div class="foreground">
+                    <h2>Profile</h2>
+                </div>
+            </ion-card>
+        </div>
+        
     </ion-row>
 </ion-grid>

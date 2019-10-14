@@ -1,17 +1,17 @@
-ion-grid{
-    padding: 0px;
+ion-col { 
+    --ion-grid-column-padding: 0px;
 }
 
-.square-menu{
-    height: 118px;
+.square-menu {
+    height: 128px;
     overflow: auto;
     border-radius: 6px;
     position: relative;
     text-align: center;
 
     img{
-        height: 118px;
-        width: 152px;
+        height: 128px;
+        width: 112px;
         object-fit: cover;
         filter: brightness(50%);
     }
@@ -26,21 +26,4 @@ ion-grid{
             color: #fff;
         }
     }
-
-}
-
-.horizontal-scroll {
-    overflow-x: auto;
-    overflow-y: hidden;
-    width: 100%;
-    white-space: nowrap;
-    margin-bottom: 32px;
-    .square-menu {
-        display: inline-block;
-    }
-}
-
-
-::-webkit-scrollbar {
-    display: none;
 }
