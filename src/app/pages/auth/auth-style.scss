@@ -5,7 +5,7 @@
         height: 80px;
         width: 100%;
         display: flex;
-        justify-content: start; 
+        justify-content: flex-start; 
         padding: 0px 12px;
         padding-top: 20px;
         position: absolute;
@@ -98,8 +98,4 @@ ion-item{
     --highlight-color-valid: var(--ion-text-primary);
     --highlight-color-invalid: var(--ion-text-primary);
     --highlight-color-focused: var(--ion-text-primary) ;
-}
-
-ion-button{
-
 }
