@@ -5,6 +5,7 @@ import {auth} from 'firebase/app'
 import {AlertController, Platform} from '@ionic/angular'
 import { UserService } from '../../../user.service';
 import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -33,13 +34,13 @@ export class LoginPage implements OnInit {
   }
 
   //Dev Login, no user
-  loginNoUser(){
-    // this.userService.setUser({
-    //   "dev",
-    //   uid: "123"
-    // })
-    this.router.navigateByUrl('/tabs',{skipLocationChange:true});
-  }
+  // loginNoUser(){
+  //   // this.userService.setUser({
+  //   //   "dev",
+  //   //   uid: "123"
+  //   // })
+  //   this.router.navigateByUrl('/tabs',{skipLocationChange:true});
+  // }
 
 
 // login for make sure with email template example : asdasd + @gmail.com

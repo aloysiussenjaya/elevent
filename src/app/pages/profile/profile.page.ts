@@ -26,29 +26,31 @@ export class ProfilePage implements OnInit {
 
     this.router.navigate(['/myevent'])
   }
-  async logout(){
-    const logoutAlert = await this.alertCtrl.create({
-      header:'Logout',
-      message:'Are you sure to log out?',
-      buttons: [
-        {
-          text: 'Cancel',
-          role: 'cancel',
-          cssClass: 'secondary',
-          handler: () => {
-          }
-        }, 
-        {
-          text: 'Ok',
-          handler: () => {
-            this.navCtrl.navigateRoot("/login");
-          }
-        }
-      ]
-    });
 
-    await logoutAlert.present();
+//   async logout(){
+//     const logoutAlert = await this.alertCtrl.create({
+//       header:'Logout',
+//       message:'Are you sure to log out?',
+//       buttons: [
+//         {
+//           text: 'Cancel',
+//           role: 'cancel',
+//           cssClass: 'secondary',
+//           handler: () => {
+//           }
+//         }, 
+//         {
+//           text: 'Ok',
+//           handler: ()==>{
+//             this.navCtrl.navigateRoot("/login")
+//           }
+          
+//         }
+//       ]
+//     });
 
-  }
+//     await logoutAlert.present();
 
-}
+//   }
+
+ }

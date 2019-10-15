@@ -11,7 +11,7 @@ export class TicketsComponent implements OnInit {
   tickets = [
     
   ];
-
+  
   hideEmptyString=false;
 
   temp_id=0;

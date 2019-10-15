@@ -5,7 +5,7 @@
       </ion-tab-button>
 
       <!-- Use a new page, do not include tabs. -->
-      <ion-tab-button (click)="goToPublishForm();" class="">
+      <ion-tab-button [ngClass]="(selectedTab == 'myevent') ? 'tab-selected' : ''" (click)="changeTab('myevent')">
           <ion-icon name="md-checkmark-circle-outline"></ion-icon>
       </ion-tab-button>
   

@@ -7,12 +7,12 @@ import { RouterModule, Routes } from '@angular/router';
  *  every page address should be here
  */
 const routes: Routes = [
-  { path: '', redirectTo: 'my-event-details', pathMatch: 'full' },
+  { path: '', redirectTo: 'splash-screen', pathMatch: 'full' },
   { path: 'login', loadChildren: './pages/auth/login/login.module#LoginPageModule' },
   { path: 'register', loadChildren: './pages/auth/register/register.module#RegisterPageModule' },
   { path: 'tabs', loadChildren: './pages/tabs/tabs.module#TabsPageModule' },
   { path: 'home', loadChildren: './pages/home/home.module#HomePageModule' },
-  { path: 'pserverofile', loadChildren: './pages/profile/profile.module#ProfilePageModule' },
+  { path: 'profile', loadChildren: './pages/profile/profile.module#ProfilePageModule' },
   { path: 'publish-form', loadChildren: './pages/publish-form/publish-form.module#PublishFormPageModule' },
   { path: 'intro-slide', loadChildren: './pages/intro-slide/intro-slide.module#IntroSlidePageModule' },
   { path: 'edit-profile', loadChildren: './pages/edit-profile/edit-profile.module#EditProfilePageModule' },

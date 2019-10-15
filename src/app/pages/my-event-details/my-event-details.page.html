@@ -11,12 +11,12 @@
 <ion-content padding>
     <ion-item padding-bottom>
         <ion-label position="stacked" color="primary">Event Name</ion-label>
-        <ion-input placeholder="Event Name" [(ngModel)]="myevent.e_name"></ion-input>
+        <ion-input placeholder="Event Name" [(ngModel)]="my_e_name"></ion-input>
     </ion-item>
 
     <ion-item padding-bottom>
     <ion-label position="stacked" color="primary">Event Type</ion-label>
-    <ion-select placeholder="Select one" okText="Okay" cancelText="Dismiss" [(ngModel)]="myevent.e_type">
+    <ion-select placeholder="Select one" okText="Okay" cancelText="Dismiss" [(ngModel)]="my_e_type">
       <ion-select-option value="seminars">Seminars/Conferences</ion-select-option>
       <ion-select-option value="music">Music/Concert</ion-select-option>
       <ion-select-option value="festival">Festival</ion-select-option>
@@ -32,7 +32,7 @@
 
   <ion-item padding-bottom>
     <ion-label position="stacked" color="primary">Visibility</ion-label>
-    <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" value="public" [(ngModel)]="myevent.e_visi">
+    <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" value="public" [(ngModel)]="my_e_visi">
       <ion-select-option value="public">Public</ion-select-option>
       <ion-select-option value="unlisted">Unlisted</ion-select-option>
     </ion-select>
@@ -41,36 +41,39 @@
   <ion-item padding-bottom lines="none">
     <ion-label color="primary" position="stacked" style="margin-bottom: 6px;">Event Location</ion-label>
     <ion-item>
-      <ion-input placeholder="Address" [(ngModel)]="myevent.e_add"></ion-input>
+      <ion-input placeholder="Address" [(ngModel)]="my_e_add"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input placeholder="City" [(ngModel)]="myevent.e_city"></ion-input>
+      <ion-input placeholder="City" [(ngModel)]="my_e_city"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input placeholder="State/Province" [(ngModel)]="myevent.e_state"></ion-input>
+      <ion-input placeholder="State/Province" [(ngModel)]="my_e_state"></ion-input>
     </ion-item>
   </ion-item>
 
   <ion-item padding-bottom>
     <ion-label position="stacked" color="primary">Start Date</ion-label>
-    <ion-datetime displayFormat="DDD, DD MMM YYYY H:mm" min="2019-01-01" max="2038-01-01" placeholder="Select Time" [(ngModel)]="myevent.e_s_date"></ion-datetime>
+    <ion-datetime displayFormat="DDD, DD MMM YYYY H:mm" min="2019-01-01" max="2038-01-01" placeholder="Select Time" [(ngModel)]="my_e_s_date"></ion-datetime>
   </ion-item>
 
   <ion-item padding-bottom>
     <ion-label color="primary" position="stacked" >End Date</ion-label>
-    <ion-datetime displayFormat="DDD, DD MMM YYYY H:mm" min="2019-01-01" max="2038-01-01" placeholder="Select Time" [(ngModel)]="myevent.e_e_date"></ion-datetime>
+    <ion-datetime displayFormat="DDD, DD MMM YYYY H:mm" min="2019-01-01" max="2038-01-01" placeholder="Select Time" [(ngModel)]="my_e_e_date"></ion-datetime>
   </ion-item>
 
-  <ion-item lines="full" padding-bottom>
+  <!-- <ion-item lines="full" padding-bottom>
     <ion-label color="primary" position="stacked">Event Cover Images</ion-label>
-    <ion-input id="img-upload" type="file" accept="image/*"></ion-input>
+    <ion-input type="file" *ngIf="!my_e_imageURL" (change)="fileChanged($event)"></ion-input> -->
     <!-- <label class="btn-upload" for="myFileInput"><ion-icon name="cloud-upload"></ion-icon> Select Images...</label>
     <input type="file" id="myFileInput" style="display:none;"> -->
-    <div class="image-list">
+    <!-- <div class="image-list">
       <img class="img-placeholder" src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-    </div>
+    </div> -->
     <!-- <small class="img-info">Click an image to remove.</small> -->
-  </ion-item>
+    <!-- <ion-card *ngIf="my_e_imageURL">
+      <img src="https://ucaredn.com/{{my_e_imageURL}}/" />
+    </ion-card>
+  </ion-item> -->
 
   <ion-item lines="full">
     <app-tickets style="width:100%">
@@ -79,7 +82,7 @@
   
   <ion-item lines="full" padding-bottom>
     <ion-label position="stacked" color="primary">Event Description</ion-label>
-    <ion-textarea placeholder="Enter event description here..." rows="5" [(ngModel)]="myevent.e_desc"></ion-textarea>
+    <ion-textarea placeholder="Enter event description here..." rows="5" [(ngModel)]="my_e_desc"></ion-textarea>
   </ion-item>
   <ion-button align-self-end fill="solid" class="ion-text-uppercase" expand="block" (click)="saveMyEvent()">Save</ion-button>
 </ion-content>

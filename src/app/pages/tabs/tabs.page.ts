@@ -29,8 +29,8 @@ export class TabsPage implements OnInit {
 
   }
 
-  goToPublishForm(){
-    this.router.navigateByUrl("/publish-form");
-  }
+  // goToPublishForm(){
+  //   this.router.navigateByUrl("/publish-form");
+  // }
 
 }

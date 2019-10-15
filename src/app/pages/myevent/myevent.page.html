@@ -1,14 +1,41 @@
 <ion-header no-border>
   <ion-toolbar>
     <ion-title>My Events</ion-title>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/tabs/profile" ></ion-back-button>
-    </ion-buttons>
+    <ion-button color="primary" fill="none" slot="end" routerLink="/my-event-details" routerDirection="forward">
+      <ion-icon slot="start" name="add"></ion-icon>
+    </ion-button>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-list>
+  
+<ion-content padding>
+    <div class="card-event" *ngFor="let event of (userEvents | async)?.events">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>{{ event.my_ecity}}<span>,</span>{{ event.my_estate }}</ion-card-subtitle>
+          <ion-card-title color="primary">{{ event.my_ename }}</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+         {{ event.my_edesc }}
+        </ion-card-content>
+        <ion-item>
+          <small slot="end">
+            <ion-button fill="outline" slot="end">View</ion-button>
+          </small>
+        </ion-item>
+      </ion-card>
+    </div>
+
+  <!-- <ion-card>
+    <ng-container *ngIF="!myevents || myevents.length == 0">
+      <div *ngFor="let n of [0,1,2]" padding>
+        <ion-skeleton-text></ion-skeleton-text>
+      </div>
+    </ng-container>
+  </ion-card> -->
+
+  <!-- <ion-list>
     <ng-container *ngIf="!myevents || myevents.length == 0">
       <div *ngFor="let n of [0,1,2]" padding>
         <ion-skeleton-text></ion-skeleton-text>
@@ -34,12 +61,6 @@
         </ion-item-option>
       </ion-item-options>
     </ion-item-sliding>
-  </ion-list>
-
-  <ion-fab vertical="bottom" horizontal="end" slots="fixed">
-    <ion-fab-button routerLink="/my-event-details" routerDirection="forward">
-      <ion-icon name="add"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
+  </ion-list> -->
 
 </ion-content>

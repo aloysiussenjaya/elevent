@@ -10,6 +10,7 @@ const routes : Routes = [
         children : [
             { path: 'home', loadChildren: 'src/app/pages/home/home.module#HomePageModule' },
             { path: 'profile', loadChildren: 'src/app/pages/profile/profile.module#ProfilePageModule' },
+            { path: 'myevent', loadChildren: 'src/app/pages/myevent/myevent.module#MyeventPageModule' },
         ]
     }
    
