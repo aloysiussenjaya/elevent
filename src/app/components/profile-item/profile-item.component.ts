@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NavController, IonTabs } from '@ionic/angular';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,11 +10,14 @@ import { Router } from '@angular/router';
 export class ProfileItemComponent implements OnInit {
 
   constructor(private router:Router) { }
-
+  
   ngOnInit() {}
-
+  
   editProfile(){
     this.router.navigate(['/edit-profile']);  
   }
+  
+  
+
 
 }

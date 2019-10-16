@@ -17,6 +17,10 @@ export class TabsPage implements OnInit {
 
   }
 
+  getTabs(){
+    return this;
+  }
+
   ngOnInit() {
     this.tabs.select('home');
   }

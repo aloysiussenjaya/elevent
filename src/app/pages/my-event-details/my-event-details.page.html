@@ -9,9 +9,9 @@
 </ion-header>
 
 <ion-content padding>
-    <ion-item padding-bottom>
+    <ion-item>
         <ion-label position="stacked" color="primary">Event Name</ion-label>
-        <ion-input placeholder="Event Name" [(ngModel)]="my_e_name"></ion-input>
+        <ion-input placeholder="" [(ngModel)]="my_e_name"></ion-input>
     </ion-item>
 
     <ion-item padding-bottom>
@@ -61,19 +61,23 @@
     <ion-datetime displayFormat="DDD, DD MMM YYYY H:mm" min="2019-01-01" max="2038-01-01" placeholder="Select Time" [(ngModel)]="my_e_e_date"></ion-datetime>
   </ion-item>
 
-  <!-- <ion-item lines="full" padding-bottom>
+  <ion-item lines="full">
     <ion-label color="primary" position="stacked">Event Cover Images</ion-label>
-    <ion-input type="file" *ngIf="!my_e_imageURL" (change)="fileChanged($event)"></ion-input> -->
-    <!-- <label class="btn-upload" for="myFileInput"><ion-icon name="cloud-upload"></ion-icon> Select Images...</label>
-    <input type="file" id="myFileInput" style="display:none;"> -->
-    <!-- <div class="image-list">
-      <img class="img-placeholder" src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-    </div> -->
-    <!-- <small class="img-info">Click an image to remove.</small> -->
-    <!-- <ion-card *ngIf="my_e_imageURL">
-      <img src="https://ucaredn.com/{{my_e_imageURL}}/" />
-    </ion-card>
-  </ion-item> -->
+    <!-- <ion-input type="file" *ngIf="!my_e_imageURL" (change)="onSelectFile($event)"></ion-input> -->
+    <div class="upload-wrap">
+      <label class="btn-upload" for="myFileInput"><ion-icon name="cloud-upload"></ion-icon> Select Images...</label>
+      <input type="file" *ngIf="!my_e_imageURL" id="myFileInput" style="display:none;" (change)="onSelectFile($event)">
+      <div class="image-list">
+        <!-- <img class="img-placeholder" src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"> -->
+        <img class="img-placeholder" [src]="url" (click)="removeImg()" alt="img" *ngIf="url">
+      </div>
+      <small class="img-info" *ngIf="url">Click an image to remove.</small>
+       <!-- <ion-card *ngIf="my_e_imageURL">
+        <img src="https://ucaredn.com/{{my_e_imageURL}}/" />
+      </ion-card> -->
+
+    </div>
+  </ion-item>
 
   <ion-item lines="full">
     <app-tickets style="width:100%">

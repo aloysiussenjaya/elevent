@@ -3,9 +3,26 @@ ion-title {
     font-weight: bold;
 }
 
+ion-item {
+    --highlight-color-focused: var(--ion-color-orange);
+    --highlight-color-valid: var(--ion-color-orange);
+    
+}
+
 ion-button{
     --background: var(--ion-color-blue);
     // --background-hover: var(--ion-color-purple-tint);
     --background-hover: var(--ion-color-blue);
     --background-activated: var(--ion-color-blue-tint);
+}
+
+.upload-wrap {
+    padding: 16px 0px;
+    .img-placeholder {
+        width: 64px;
+    }
+    
+    .btn-upload {
+        margin: 12px 0px;
+    }
 }

@@ -52,6 +52,8 @@ export class MyEventDetailsPage implements OnInit {
   // }
 
   // myeventId = null;
+  
+  url = "";
 
   constructor(
     // private myeventService: MyeventService, 
@@ -61,6 +63,24 @@ export class MyEventDetailsPage implements OnInit {
     public afstore: AngularFirestore,
     public user: UserService
     ) { }
+
+  onSelectFile(event){
+    if(event.target.files && event.target.files[0]) {
+      var reader = new FileReader();
+
+      reader.readAsDataURL(event.target.files[0]); // read file as data url
+
+      reader.onload = (event:any) => { // called once readAsDataURL is completed
+        this.url = event.target.result;
+        console.log(this.url);
+      }
+
+    }
+  }
+
+  removeImg(){
+    this.url= "";
+  }
 
   ngOnInit() {
     // this.myeventId = this.route.snapshot.params['id'];

@@ -8,7 +8,7 @@ ion-card{
 img{
     max-height: 180px;
     object-fit: cover;
-    filter: brightness(60%);
+    filter: brightness(70%);
 }
 
 .foreground {
@@ -22,6 +22,8 @@ img{
         font-family: 'Comfortaa';
         font-weight: bold;
         margin: 8px 0px;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     p {
         font-size: 0.8rem;
