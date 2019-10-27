@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { UserService } from '../../user.service';
 import { NavController, AlertController } from '@ionic/angular';
 import { LoginPage } from '../auth/login/login.page';
@@ -20,6 +20,10 @@ export class ProfilePage implements OnInit {
 
   ngOnInit() {
     this.username=this.userService.getUsername();
+  }
+
+  createEvent(){
+    this.router.navigate(['/my-event-details']);
   }
 
   async myEventsPage(){

@@ -69,7 +69,7 @@
       <input type="file" *ngIf="!my_e_imageURL" id="myFileInput" style="display:none;" (change)="onSelectFile($event)">
       <div class="image-list">
         <!-- <img class="img-placeholder" src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"> -->
-        <img class="img-placeholder" [src]="url" (click)="removeImg()" alt="img" *ngIf="url">
+        <img class="img-placeholder" [src]="url" (click)="removeImg()"s alt="img" *ngIf="url">
       </div>
       <small class="img-info" *ngIf="url">Click an image to remove.</small>
        <!-- <ion-card *ngIf="my_e_imageURL">

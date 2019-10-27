@@ -115,6 +115,8 @@ export class MyEventDetailsPage implements OnInit {
     // const my_etprice = this.my_e_t_price
     const my_edesc = this.my_e_desc
 
+    console.log("saving event: " + my_ename + " in user: " + this.user.getUID());
+
     this.afstore.doc(`users/${this.user.getUID()}`).update({
       events: firestore.FieldValue.arrayUnion({
         my_ename,
